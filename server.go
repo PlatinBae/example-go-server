@@ -19,7 +19,7 @@ func main() {
   // Create server
   app := fiber.New()
 	
-	// Create Logging
+  // Create Logging
   app.Use(logger.New(logger.Config{
     Format:     chalk.Blue.Color("[${time}] ${status} - ${latency} ${method} ${path}\n"),
     TimeFormat: "02-Jan-2006",
@@ -34,7 +34,7 @@ func main() {
   // Return json message from api
   app.Get("/api", func(c *fiber.Ctx) error {
     return c.JSON(fiber.Map{
-    	"Hello": "World",
+      "Hello": "World",
     })
   })
   
